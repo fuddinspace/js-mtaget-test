@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+		<title>Jawaban</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .form-control{
+      width: 50%;
+    }
+  </style>
+</head>
+<script>
+	function perulangan() {
+  var text = "";
+  var x;
+  for (x = 30; x <= 40; x++) {
+	y = x + 1;
+	
+	 if(y < 37){
+	 
+		text += "<b>Normal</b>  untuk Angka " + x + " + 1 = "  +y+ "<br>";
+	 } else if( y == 37){
+		text += "<b>Batas</b> untuk Angka "+x+" + 1 =" +y+ "<br>";
+	 } else if ( y > 37){
+		text += "<b>Panas</b>  untuk Angka " + x + " + 1 = "  +y+ "<br>";
+	 }
+    
+  }
+  document.getElementById("hasil").innerHTML = text;
+}
+</script>
+<body>
+		<button onclick="perulangan()">TOMBOL UNTUK MENGULANG 30 SAMPAI 40</button>
+
+<!-- id hasil -->
+<div id="hasil"></div>
+</body>
+</html>

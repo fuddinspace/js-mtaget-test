@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Soal 3</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script type="text/javascript">
+function validasiEmail() {
+	var rs = document.forms["formInput"]["email"].value;
+	var atps=rs.indexOf("@");
+	var dots=rs.lastIndexOf(".");
+	if (rs){
+		if (atps<1 || dots<atps+2 || dots+2>=rs.length) {
+			alert("Alamat email tidak valid.");
+			return false;
+		} else {
+			alert("Alamat email valid.");
+		}
+	
+	}else{
+		alert("Maaf Tidak Boleh Kosong Inputan Emailnya");
+	}
+	
+}
+</script>
+</head>
+<body>
+ <div class="container">
+        <div class="row">
+      
+ 
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-header font-italic">
+                Soal 3
+              </div>
+              <div class="card-body">
+                <form name="formInput" onsubmit="validasiEmail();" required>
+				  
+				<div class="form-group">
+					<label for="comment">E-mail</label>
+					<input type="text" name="email" class="form-control" placeholder="Email" required>
+				</div>
+				
+				
+
+				<input type="submit" value="submit" class="btn btn-warning mt-3" >
+                
+				 </form>
+              </div>
+            </div>
+          </div>
+ 
+         
+        </div>
+      </div>
+
+	
+
+
+</body>
+</html>

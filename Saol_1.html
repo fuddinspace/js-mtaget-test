@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+		<title>Jawaban</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .form-control{
+      width: 50%;
+    }
+  </style>
+</head>
+<script>
+  function  ukuransuhu()
+  {
+    var ukuran = document.getElementById("ukuran").value;
+  
+	if(ukuran){
+		if(ukuran < 30 ){
+				alert("Maaf ukuran di bawah 30, Tidak termasuk Ukuran");
+			}else if (ukuran < 37) {
+				alert("normal");
+			}else if ( ukuran  == 37){
+				alert("batas");
+			}else if ( ukuran  <= 40){
+				alert("Panas");
+			}else if( ukuran > 40){
+				alert("Maaf ukuran di atas 40, Tidak termasuk Ukuran");
+		}
+	}
+	else{
+		alert("Maaf Tidak Boleh Kosong Inputannya");
+	}
+}
+ 
+ 
+</script>
+<body>
+		
+      <div class="container">
+        <div class="row">
+        
+ 
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-header font-italic">
+                Soal 1
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Masukan Angka 30 - 40</h6>
+                <input type="text" class="form-control" id="ukuran" placeholder="Input Angka 30-40" required />
+                <button type="button" class="btn btn-warning mt-3" onclick="ukuransuhu()"> Masukkan Angka</button>
+              
+              </div>
+            </div>
+          </div>
+ 
+          
+        </div>
+      </div>
+</body>
+</html>
